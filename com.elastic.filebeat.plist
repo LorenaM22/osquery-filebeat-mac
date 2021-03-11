@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Disabled</key>
+    <false/>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin</string>
+    </dict>
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <true/>
+    </dict>
+
+    <key>Label</key>
+    <string>com.elastic.filebeat</string>
+    <key>ProgramArguments</key>
+    <array>
+
+        <string>/Users/lorena/Desktop/filebeat/filebeat</string>
+        <string>-c</string>
+        <string>/Users/lorena/Desktop/filebeat/filebeat.yml</string>
+    </array>
+    <key>StandardErrorPath</key>
+    <string>/tmp/appname-error.log</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/appname-info.log</string>
+    <key>KeepAlive</key>
+    <true/>
+</dict>
+</plist>
+
