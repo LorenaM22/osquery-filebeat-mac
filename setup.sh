@@ -71,8 +71,12 @@ sudo curl -L -O https://raw.githubusercontent.com/LorenaM22/osquery-filebeat-mac
 sudo chown root osquery.yml
 
 #Start filebeat service
-echo "[+] - Starting filebeat service"
-cd ..
-sudo chown root filebeat.yml
-sudo ./filebeat -e
- exit 8
+cd /Library/LaunchDaemons
+echo "[+] -Downloading plist"
+sudo curl -L -O https://raw.githubusercontent.com/LorenaM22/osquery-filebeat-mac/master/com.elastic.filebeat.plist
+echo "[+] -Starting filebeat service"
+sudo launchctl load -w com.elastic.filebeat.plist
+sudo launchctl start com.elastic.filebeat
+sudo launchctl list | grep com.elastic.filebeat
+
+
